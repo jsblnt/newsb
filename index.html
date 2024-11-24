@@ -19,18 +19,22 @@
             padding: 1rem 0;
             text-align: center;
             border-bottom: 1px solid #ddd;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
         }
-        nav a {
-            margin: 0 1rem;
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+        nav ul li a {
             text-decoration: none;
             color: #ff8c00; /* Laranja */
             font-weight: bold;
         }
-        nav a:hover {
+        nav ul li a:hover {
             color: #e07b00; /* Laranja mais escuro */
         }
         .separator {
@@ -54,22 +58,27 @@
             text-align: center;
             border-top: 1px solid #ddd;
         }
-        footer nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
+        footer ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
-        footer nav a {
-            margin: 0 0.5rem;
+        footer ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+        footer ul li a {
             text-decoration: none;
             color: #ff8c00; /* Laranja */
             font-weight: bold;
         }
-        footer nav a:not(:last-child)::after {
+        footer ul li a:not(:last-child)::after {
             content: "|";
             margin-left: 0.5rem;
             color: #333;
+        }
+        footer ul li a:hover {
+            color: #e07b00; /* Laranja mais escuro */
         }
         #topButton {
             display: none;
@@ -91,11 +100,7 @@
         }
         /* Estilos responsivos */
         @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                padding: 1rem;
-            }
-            nav a {
+            nav ul li, footer ul li {
                 display: block;
                 margin: 0.5rem 0;
             }
@@ -106,14 +111,7 @@
                 padding: 2rem 5%;
                 margin: 1rem 0;
             }
-            footer nav {
-                flex-direction: column;
-            }
-            footer nav a {
-                display: block;
-                margin: 0.5rem 0;
-            }
-            footer nav a::after {
+            footer ul li a::after {
                 content: "";
                 margin: 0;
             }
@@ -136,11 +134,13 @@
 </head>
 <body>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Posts</a>
-        <a href="#">Tags</a>
-        <a href="#">About</a>
-        <a href="#">中文</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Posts</a></li>
+            <li><a href="#">Tags</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">中文</a></li>
+        </ul>
     </nav>
     <div class="separator"></div>
     <main>
@@ -152,13 +152,13 @@
         <p>Se você tiver alguma dúvida ou sugestão, entre em contato conosco através da nossa página de <a href="#">contato</a>.</p>
     </main>
     <footer>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Posts</a>
-            <a href="#">Tags</a>
-            <a href="#">About</a>
-            <a href="#">中文</a>
-        </nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Posts</a></li>
+            <li><a href="#">Tags</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">中文</a></li>
+        </ul>
         <p>&copy; 2024 Meu Site Simples</p>
     </footer>
     <button onclick="topFunction()" id="topButton" title="Subir ao topo">Topo</button>
