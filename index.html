@@ -9,13 +9,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff; /* Fundo branco */
+            background-color: #fff8dc; /* Fundo amarelo claro */
             color: #333;
             line-height: 1.8;
             font-size: 16px; /* Tamanho base do texto */
         }
         nav {
-            background-color: #f8f9fa;
+            background-color: #fff8dc; /* Fundo amarelo claro */
             padding: 1rem 0;
             text-align: center;
             border-bottom: 1px solid #ddd;
@@ -27,7 +27,11 @@
         nav a {
             margin: 0 1rem;
             text-decoration: none;
-            color: #007bff;
+            color: #ff8c00; /* Laranja */
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #e07b00; /* Laranja mais escuro */
         }
         .separator {
             border-top: 1px solid #ddd;
@@ -36,6 +40,7 @@
         main {
             padding: 2rem 10%;
             margin: 2rem 0;
+            background-color: #fff8dc; /* Fundo amarelo claro */
         }
         h1 {
             font-size: 2.5rem; /* Tamanho do título principal */
@@ -44,7 +49,7 @@
             font-size: 2rem; /* Tamanho dos subtítulos */
         }
         footer {
-            background-color: #f8f9fa;
+            background-color: #fff8dc; /* Fundo amarelo claro */
             padding: 1.5rem 0;
             text-align: center;
             border-top: 1px solid #ddd;
@@ -58,7 +63,8 @@
         footer nav a {
             margin: 0 0.5rem;
             text-decoration: none;
-            color: #007bff;
+            color: #ff8c00; /* Laranja */
+            font-weight: bold;
         }
         footer nav a:not(:last-child)::after {
             content: "|";
@@ -74,14 +80,14 @@
             font-size: 18px;
             border: none;
             outline: none;
-            background-color: #007bff;
+            background-color: #ff8c00; /* Laranja */
             color: white;
             cursor: pointer;
             padding: 15px;
             border-radius: 4px;
         }
         #topButton:hover {
-            background-color: #555;
+            background-color: #e07b00; /* Laranja mais escuro */
         }
         /* Estilos responsivos */
         @media (max-width: 768px) {
@@ -130,9 +136,11 @@
 </head>
 <body>
     <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
+        <a href="#">Home</a>
+        <a href="#">Posts</a>
+        <a href="#">Tags</a>
+        <a href="#">About</a>
+        <a href="#">中文</a>
     </nav>
     <div class="separator"></div>
     <main>
@@ -145,9 +153,11 @@
     </main>
     <footer>
         <nav>
-            <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
+            <a href="#">Home</a>
+            <a href="#">Posts</a>
+            <a href="#">Tags</a>
+            <a href="#">About</a>
+            <a href="#">中文</a>
         </nav>
         <p>&copy; 2024 Meu Site Simples</p>
     </footer>
