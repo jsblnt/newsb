@@ -26,9 +26,12 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Permitir quebra de linha */
         }
         nav ul li {
             padding: 0 1rem; /* Espaçamento interno entre os links */
+            flex: 1 1 auto; /* Permitir que os itens se ajustem */
+            text-align: center; /* Centralizar texto */
         }
         nav ul li a {
             text-decoration: none;
@@ -40,10 +43,8 @@
         }
         .separator {
             border-top: 1px solid #ddd;
-            margin: 1rem 10%; /* Garantir que não toque as laterais */
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
+            width: 80%; /* Largura definida para evitar tocar as laterais */
+            margin: 1rem auto; /* Centraliza a barra */
         }
         main {
             padding: 2rem 10%;
@@ -68,9 +69,12 @@
             padding: 0;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap; /* Permitir quebra de linha */
         }
         footer ul li {
             padding: 0 1rem; /* Espaçamento interno entre os links */
+            flex: 1 1 auto; /* Permitir que os itens se ajustem */
+            text-align: center; /* Centralizar texto */
         }
         footer ul li a {
             text-decoration: none;
@@ -106,13 +110,15 @@
         /* Estilos responsivos */
         @media (max-width: 768px) {
             nav ul, footer ul {
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap; /* Permitir quebra de linha */
             }
             nav ul li, footer ul li {
-                padding: 0.5rem 0;
+                flex: 1 1 100px; /* Definir uma largura mínima */
+                text-align: center; /* Centralizar texto */
+                padding: 0.5rem; /* Ajustar espaçamento */
             }
             .separator {
-                margin: 0 5%;
                 width: 90%;
             }
             main {
@@ -159,7 +165,6 @@
         <h2>Contato</h2>
         <p>Se você tiver alguma dúvida ou sugestão, entre em contato conosco através da nossa página de <a href="#">contato</a>.</p>
     </main>
-    <div class="separator"></div>
     <footer>
         <ul>
             <li><a href="#">Home</a></li>
