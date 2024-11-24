@@ -24,10 +24,11 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
         nav ul li {
-            display: inline;
-            margin-right: 1rem;
+            padding: 0 1rem; /* Espaçamento interno entre os links */
         }
         nav ul li a {
             text-decoration: none;
@@ -39,7 +40,10 @@
         }
         .separator {
             border-top: 1px solid #ddd;
-            margin: 1rem 10%;
+            margin: 1rem 10%; /* Garantir que não toque as laterais */
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
         main {
             padding: 2rem 10%;
@@ -62,10 +66,11 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
         footer ul li {
-            display: inline;
-            margin-right: 1rem;
+            padding: 0 1rem; /* Espaçamento interno entre os links */
         }
         footer ul li a {
             text-decoration: none;
@@ -100,12 +105,15 @@
         }
         /* Estilos responsivos */
         @media (max-width: 768px) {
+            nav ul, footer ul {
+                flex-direction: column;
+            }
             nav ul li, footer ul li {
-                display: block;
-                margin: 0.5rem 0;
+                padding: 0.5rem 0;
             }
             .separator {
                 margin: 0 5%;
+                width: 90%;
             }
             main {
                 padding: 2rem 5%;
