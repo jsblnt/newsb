@@ -14,15 +14,15 @@
             line-height: 1.8;
             font-size: 16px; /* Tamanho base do texto */
         }
-        header {
+        nav {
             background-color: #f8f9fa;
-            padding: 2rem 0;
+            padding: 1rem 0;
             text-align: center;
             border-bottom: 1px solid #ddd;
-        }
-        nav {
-            margin: 1rem 0;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
         nav a {
             margin: 0 1rem;
@@ -48,6 +48,12 @@
             padding: 1.5rem 0;
             text-align: center;
             border-top: 1px solid #ddd;
+        }
+        footer nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
         }
         footer nav a {
             margin: 0 0.5rem;
@@ -79,6 +85,10 @@
         }
         /* Estilos responsivos */
         @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 1rem;
+            }
             nav a {
                 display: block;
                 margin: 0.5rem 0;
@@ -90,6 +100,9 @@
                 padding: 2rem 5%;
                 margin: 1rem 0;
             }
+            footer nav {
+                flex-direction: column;
+            }
             footer nav a {
                 display: block;
                 margin: 0.5rem 0;
@@ -100,8 +113,8 @@
             }
         }
         @media (max-width: 480px) {
-            header, footer {
-                padding: 1rem 0;
+            nav {
+                padding: 1rem;
             }
             nav a {
                 font-size: 0.9rem;
@@ -116,9 +129,6 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Meu Site Simples</h1>
-    </header>
     <nav>
         <a href="#">Início</a>
         <a href="#">Sobre</a>
@@ -126,8 +136,12 @@
     </nav>
     <div class="separator"></div>
     <main>
-        <h2>Bem-vindo!</h2>
+        <h1>Bem-vindo!</h1>
         <p>Este é um exemplo de site HTML simples com layout básico.</p>
+        <h2>Sobre</h2>
+        <p>Este site foi criado como um exemplo para demonstrar como é possível criar um layout simples e eficaz utilizando HTML e CSS. Sinta-se à vontade para explorar e personalizar conforme suas necessidades.</p>
+        <h2>Contato</h2>
+        <p>Se você tiver alguma dúvida ou sugestão, entre em contato conosco através da nossa página de <a href="#">contato</a>.</p>
     </main>
     <footer>
         <nav>
